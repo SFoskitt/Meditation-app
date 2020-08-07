@@ -42,7 +42,8 @@
     "test": "node scripts/test.js --env=jsdom",
     "make-standard": "eslint --fix ./src;exit 0",
     "nag": "eslint ./src;exit 0",
-    "deploy": "sh scripts/deploy.sh"
+    "deploy": "sh scripts/deploy.sh",
+    "heroku-postbuild": "webpack -p --config ./webpack.config.prod.js --progress"
   },
   "jest": {
     "collectCoverageFrom": [
